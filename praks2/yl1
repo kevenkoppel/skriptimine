@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# tervituskiri
+#
+echo -n "Tere, " #
+echo -n "User" #
+echo "!" #
+#
+#
