@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#
+#See script väljutab minu nime, õppegrupi, antud aine meeldivuse ning hetkesu mulje ning edasijõudmise
+#
+#
+echo "Keven Koppel"
+echo "IS118"
+echo "Antud õppeaine on huvitav"
+echo "Saan hakkama"
+#
+#
