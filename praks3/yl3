@@ -1,0 +1,5 @@
+#!/bin/bash
+# See script näitab kui kaua on arvuti töödanud, väljastab ka arvuti nime(hostname) 
+#
+echo "Arvuti, nimega `hostname` on töötanud `uptime -p | cut -f1 -d"," | cut -f2 -d" "` tundi ja `uptime -p | cut -f2 -d"," | cut -f2 -d" "` minutit!"
+
