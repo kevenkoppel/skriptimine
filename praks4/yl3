@@ -1,0 +1,16 @@
+#!/bin/bash
+#See skript arvutab välja kui palju busse on vaja reisiks ning näitab ka palju kohti jääb üle
+#
+echo -n "Mitu reisijat on grupis?: "
+read arvreisija
+echo "Määrasite reisijate arvuks $arvreisija"
+#
+#
+echo -n "Mitu kohta on bussis kokku?: "
+read arvbussiskokku
+echo "Määrasite istumiskohtade arvuks $arvbussiskokku"
+#
+#
+busslahutadagrupp=`expr $arvreisija / $arvbussiskokku`
+nii=`expr $arvreisija % $arvbussiskokku`
+echo  "Lisa busse on vaja $busslahutadagrupp ja üle jääb $nii"
