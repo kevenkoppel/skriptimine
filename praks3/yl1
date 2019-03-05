@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#Skript väljastab kuupäeva ja kalendri
+#
+#
+echo''
+echo -n 'Tänane kuupäev on ' 
+date +"%A, %B %d, %Y"
+echo ''
+#
+#
+#
+cal
+echo ''
+#
+#
+#
+
