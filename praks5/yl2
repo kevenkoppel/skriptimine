@@ -1,0 +1,13 @@
+#!/bin/bash
+#Kolmnurga pindala kolme külje abil (heroni valem)
+#S=Ruutjuur(p(p-a)(p-b)(p-c)		(P on kolnurga ümbermõõt, ehk (a+b+c)/2)
+
+read -p "Kolmnurga külg A: " A
+read -p "Kolmnurga külg B: " B
+read -p "Kolmnurga külg C: " C
+
+P=$(bc <<< "scale=2; ($A+$B+$C)/2")
+
+S=$(bc <<< "scale=2; sqrt ($P*($P-$A)*($P-$B)*($P-$C))")
+
+echo "Kolmnurga pindala on $S cm2"
