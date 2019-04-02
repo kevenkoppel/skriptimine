@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#See skript arvutab, mis päeval te reisilt tagasi jõuate
+#
+echo "Esmaspäev-1 Teisipäev-2 Kolmapäev-3 Neljapäev-4 Reede-5 Laupäev-6 Pühapäev-7"
+#
+echo "Sisesta päeva number kuna ära sõidad: "
+read lahkumispaev
+echo "sisesta ööpäevade arv: "
+read paevadearv
+#
+FF=$(($paevadearv % 7))
+tagasitulek=$(($lahkumispaev + $FF))
+#
+echo "Tagasi jõuad päeval number:$tagasitulek"
+#
