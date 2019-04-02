@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#Skript arvutab Heroni valemi abil vastuse
+#
+echo "Sisesta suurusühik(mm2,cm2,dm2,m2,km2)"
+read Uhik
+#See ühik väljunudb vastuses
+echo "Sisesta A külje pikkus"
+read A
+echo "Sisesta B külje pikkus"
+read B
+echo "Sisesta C külje pikkus"
+read C
+#
+K=`echo "scale=2;$A+$B+$C" | bc`
+#
+F=`echo "scale=2;$K/2" | bc`
+#
+S=`echo "scale=2;sqrt($F*($F-$A)*($F-$B)*($F-$C))" | bc`
+#
+echo "Pindala on "$S $Uhik
+#
