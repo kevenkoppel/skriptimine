@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#Skript leiab kolmnurga hüpotenuusi kahe külje abil
+echo "Sisesta külje A pikkus"
+read A
+echo "Sisesta külje B väärtus"
+read B
+#
+H=`echo "scale=2;$A^2+$B^2" | bc`
+F=`echo "scale=2;sqrt($H)" | bc`
+#
+echo "C="$F
+#
+#
