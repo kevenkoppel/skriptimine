@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#See skript küsib kasutajalt tema vanust ja vastab neile kas nad on laps,nooruk,täiskasvanu või seenior
+#
+echo "Sisestage oma vanus: "
+read vanus
+#
+if [[ "$vanus" =~ [^0-9]+ ]] ; then
+	echo "Sisesta ainult number: "
+#
+elif (($vanus <="11")) ; then
+	echo "Oled laps"
+elif (($vanus <="18")) ; then
+	echo "Oled nooruk"
+elif (($vanus <="63")) ; then
+	echo "Oled täiskasvanu"
+elif (($vanus >"63")) ; then 
+	echo "Oled seenior"
+#
+fi
+#
