@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#See skript näitab kui palju busse läheb vaja reisijate transportimiseks
+#
+echo "Sisesta reisijate arv: "
+read reisijad
+echo "Sisesta kohtade arv bussis: "
+read bussikohad
+#
+buss=$(($reisijad / $bussikohad))
+ylejaak=$(($reisijad % $bussikohad))
+#
+if test $ylejaak -gt 0
+then
+	buss=$(($buss + 1))
+fi
+#
+echo "Kokku on vaja $buss bussi."
+#
