@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#See skript kontrollib kas sisestatud arv on algarv või mitte
+#
+echo "Sisesta arv: "
+read arv
+#
+if [ $arv -eq 0 -o $arv -eq 1 ]; then
+	echo "$arv ei ole algarv."
+else
+	j=2
+	ylejaak=$(($arv % $j))
+	while [ $ylejaak -ne 0 ]
+	do
+		j=$(($j + 1))
+		ylejaak=$(($arv % $j))
+	done
+	if [ $arv -eq  $j ]; then
+echo "$arv on algarv"
+	else
+echo "$arv ei ole algarv"
+fi
+fi
+#
