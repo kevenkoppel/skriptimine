@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#See skript küsib kasutajalt kuu numbrit ning skript ütleb aastaaja 
+#
+echo "Sisesta kuu number: "
+read kuu
+#
+if  [[ "$kuu" =~ [^0-9]+ ]] ; then
+	echo "Sisesta ainult kuu number: "
+#
+elif test $kuu -gt 0 -a $kuu -le 2 -o $kuu -eq 12
+then 
+	echo "Hetkel on talv"
+elif test $kuu -ge 3 -a $kuu -le 5
+then
+	echo "Hetkel on kevad"
+elif test $kuu -ge 6 -a $kuu -le 8
+then
+	echo "Hetkel on suvi"
+elif test $kuu -ge 9 -a $kuu -le 11
+then 
+	echo "Hetkel on sügis"
+elif test $kuu -eq 0 -o $kuu -gt 12
+then
+	echo "Palun sisesta number, mis jääb vahemikku 1-12"
+fi
+#
