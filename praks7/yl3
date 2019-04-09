@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#See skript tervitab ja näitab kellaaega
+#
+echo "Sisesta tund: "
+read tund
+#
+if [[ "$tund" =~ [^0-9]+ ]] ; then
+	echo "Sisesta ainult number: "
+#
+elif [ $tund -ge 6 -a $tund -le 12 ]; then
+	echo "Tere hommikust!"
+elif [ $tund -gt 12 -a $tund -le 18 ]; then
+	echo "Tere päevast!"
+elif [ $tund -gt 18 -a $tund -le 22 ]; then
+	echo "Tere õhtust!"
+elif [ $tund -ge 22 -a $tund -le 24 ] || [ $tund -ge 0 -a $tund -lt 6 ]; then
+	echo "Head ööd!"
+#
+else
+	echo "Vaata, et number jääks vahemikku 1-24: "
+fi
+#
