@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#See skript väljastab tärne
+#
+echo "Sisesta ridade arv: "
+read rida
+echo "sisesta veergude arv: "
+read veerg
+for (( i = 1 ; i <=$rida; i++ ))
+do
+	for (( j = 1 ;j <=$veerg; j++ ))
+	do
+		echo -n "*"
+	done
+echo ""
+done
