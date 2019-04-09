@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#See näitab, kas arv on paaris või paaritu
+#
+if [ -z "$1" ]; then
+	echo "Sisesta arv: $0 arv"
+#
+else
+arvutus=$(( $1 % 2 ))
+if [ $arvutus -eq 0 ]; then
+#
+
+	echo "$1 on paaris arv" 
+else
+	echo "$1 on paaritu arv"
+fi
+fi
+#
+
