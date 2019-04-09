@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#See skript arvutab kasutaja poolt sisestaud arvude summa
+#
+echo "Sisesta number: "
+read number
+#
+sum=0
+while [ $number -ne 0 ]
+#
+do
+	ylejaak=$(($number % 10))
+	sum=$(($sum + $ylejaak))
+	number=$(($number / 10))
+done
+echo "Nende arvude summa on: $sum"
+#
