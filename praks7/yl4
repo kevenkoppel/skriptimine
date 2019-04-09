@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#See skript tervitab kasutajat kellaaja järgi
+#
+kellaaeg=`date "+ %H"`
+#väljastab kella ainult tundidena
+if [ $kellaaeg -ge 6 -a $kellaaeg -le 12 ]; then
+	echo "Tere hommikust, $(whoami)!"
+elif [ $kellaaeg -gt 12 -a $kellaaeg -le 18 ]; then
+	echo "Tere päevast, $(whoami)!"
+elif [ $kellaaeg -gt 18 -a $kellaaeg -le 22 ]; then
+	echo "Tere õhtust, $(whoami)!"
+elif [ $kellaaeg -ge 22 -a $kellaaeg -lt 24 ] || [ $kellaaeg -ge 0 -a $kellaaeg -lt 6 ]; then
+	echo "Head ööd, $(whoami)!"
+fi
+#
