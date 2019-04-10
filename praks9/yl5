@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#Tekitab pool tärnid ja puul O tähe kujundised
+#
+echo "Sisesta ridade arv: "
+read rida
+#
+for (( i = $rida ; i >=1; i-- ))
+do
+	for (( j = 1 ;j <=$rida; j++ ))
+	do
+
+if [ $i -gt $j ]; then
+		echo -n "o"
+else
+echo -n "*"
+
+fi
+	done
+echo ""
+done
+#
