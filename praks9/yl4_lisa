@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#See skript tekitab trepi tärnides tagurpidi
+#
+echo "Sisesta ridade arv: "
+read rida
+#
+for (( i = $rida ; i>=1; i-- ))
+do
+	for (( j = 1 ;j <=$rida; j++ ))
+	do
+#
+if [ $i -ge $j ]; then
+		echo -n "*"
+else
+echo -n " "
+#
+fi
+	done
+echo " "
+done
+#
