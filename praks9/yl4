@@ -2,7 +2,7 @@
 #
 #See skript tekitab trepi tärnides
 #
-echo "Sisesta ridade arv"
+echo "Sisesta ridade arv: "
 read rida
 for (( i = 1 ; i <=$rida; i++ ))
 do
